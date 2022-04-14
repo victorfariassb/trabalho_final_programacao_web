@@ -6,12 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/index.js">
+    
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }</script>
+
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Candidatos a presidente</title>
 </head>
 <body>
+    <header>
+     <!-- <h1>Eleições <span class="Titulo"><br>2022</span></h1>-->
+      <!-- Top Navigation Menu -->
+      <div class="topnav">
+        <a id="Logo" href="#home" class="active"><span class="titulo"><b>Eleições 2022</b></span></a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+          <a href="#candidatos">Candidatos a presidente</a>
+          <a href="#pesquisa">Corrida eleitoral</a>
+          <a href="#redes">Redes Sociais</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+
+        
+      </div>
+      <p class="inicio"><b>Este site tem como objetivo apresentar os principais candidatos à presidência e as pesquisas de intenção de voto, bem como performance nas redes sociais</b> </p>
+
+    </header>
+    
     <script scr="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
-    <h2>Candidatos a presidente</h2>
+    <h2 id="candidatos">Candidatos a presidente</h2>
     <section class="cards">
         <div class="candidato-1">
             <div class="foto-card">
@@ -93,7 +126,7 @@
             </div>
         </div>
     </section>
-    <section class="gallery">
+    <section id="pesquisa" class="gallery">
         <div class="card" id="primeiro">
           <div class="card-info" id="card_info_1">
               <div class="title">Corrida eleitoral</div>
@@ -208,7 +241,7 @@
         <a href="#segundo">2</a>
         <a href="#terceiro">3</a>
       </nav>
-  <section>
+  <section id="redes">
     <div class="titulo">Placar das redes sociais</div>
     <div>
         <canvas id="myChart"></canvas> 
