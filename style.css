@@ -9,6 +9,8 @@ body{
     background-color: #FAF6F3;
     max-width: 390px;
     margin: auto auto;
+    align-content: center;
+
 }
 
 section {
